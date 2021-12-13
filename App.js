@@ -5,11 +5,22 @@ import Header from './components/Header';
 import StartGameScreen from './screens/StartGameScreen';
 import GameScreen from './screens/GameScreen';
 import GameOverScreen from './screens/GameOver';
+import { AppLoading } from 'expo'
 
 export default function App() {
   
   const [userNumber, setUserNumber] = useState();
   const [guessRounds, setGuessRounds] = useState(0);
+  const [dataLoaded, setDataLoaded] = useState(false);
+
+  // if(!dataLoaded)
+  // {
+  //   <AppLoading 
+  //     // startAsync = {fetchFonts}
+  //     onFinish={() => setDataLoaded(true)}
+  //     OnError={(err) => console.log(err)}
+  //     />
+  // }
 
   const configureNewGameHandler = ()=>{
     setGuessRounds(0);
